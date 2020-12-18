@@ -109,12 +109,16 @@ for (const plugin of Object.values(pluginsData)) {
 cleanupIDs.params.minify = false;
 convertPathData.params.makeArcs = undefined;
 convertPathData.params.transformPrecision = floatPrecision;
+convertPathData.params.leadingZero = false;
+cleanupNumericValues.params.leadingZero = false;
+mergePaths.params.leadingZero = false;
 convertShapeToPath.params.convertArcs = true;
 convertTransform.params.transformPrecision = floatPrecision;
+convertTransform.params.leadingZero = floatPrecision;
 inlineStyles.params.onlyMatchedOnce = false;
 removeUselessStrokeAndFill.params.removeNone = true;
 
-const optimizedPluginsData = (function() {
+const optimizedPluginsData = (function () {
   return Object.values(pluginsData)
     .map(item => [item])
     .reduce((arr, item) => {

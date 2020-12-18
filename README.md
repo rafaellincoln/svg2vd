@@ -1,22 +1,28 @@
-# svg2vd
+# svg2vdandroid
 
 [![Build status][travis-badge]][travis-badge-url]
 [![Coverage status][coveralls-badge]][coveralls-badge-url]
 
-`svg2vd` is an SVG to `VectorDrawable` command line tool.
+`svg2vdandroid` is an SVG to `VectorDrawable` command line tool.
 
 ## Installation
 
-You can install `svg2vd` using [npm][npm] w/ the following command:
+You can install `svg2vdandroid` using [npm][npm] OR [yarn][yarn] w/ the following command:
 
 ```sh
-npm install -g svg2vd
+npm install -g svg2vdandroid
+```
+
+OR
+
+```sh
+yarn global add svg2vdandroid
 ```
 
 ## Usage
 
 ```text
-Usage: svg2vd [options] [file]
+Usage: svg2vdandroid [options] [file]
 
 Options:
   -V, --version          output the version number
@@ -32,28 +38,28 @@ Options:
 
 ```sh
 # Convert an SVG to VectorDrawable.
-svg2vd filename.svg
+svg2vdandroid filename.svg
 
 # Convert all files ending with '.svg' to VectorDrawable.
-svg2vd *.svg
+svg2vdandroid *.svg
 
 # Convert an SVG to VectorDrawable and write the output to a new file.
-svg2vd filename.svg -o vector.xml
+svg2vdandroid filename.svg -o vector.xml
 
 # Convert an SVG to VectorDrawable using standard input and standard output.
-cat filename.svg | svg2vd -i - -o - > vector.xml
+cat filename.svg | svg2vdandroid -i - -o - > vector.xml
 
 # Convert all SVG files in a directory.
-svg2vd -d path/to/directory
+svg2vdandroid -d path/to/directory
 
 # Convert all SVG files in a directory and write them to a new directory.
-svg2vd -d path/to/input/directory -o path/to/output/directory
+svg2vdandroid -d path/to/input/directory -o path/to/output/directory
 
 # Convert all files ending with '.svg' and write them to a new directory.
-svg2vd *.svg -o path/to/output/directory
+svg2vdandroid *.svg -o path/to/output/directory
 
 # Pass a string as input and write the output to a new file.
-svg2vd -s '<svg>...</svg>' -o vector.xml
+svg2vdandroid -s '<svg>...</svg>' -o vector.xml
 ```
 
 ## Build instructions
@@ -80,13 +86,3 @@ To test the tool, run:
 ```sh
 npm run test
 ```
-
-  [travis-badge]: https://travis-ci.org/alexjlockwood/svg2vd.svg?branch=master
-  [travis-badge-url]: https://travis-ci.org/alexjlockwood/svg2vd
-  [coveralls-badge]: https://coveralls.io/repos/github/alexjlockwood/svg2vd/badge.svg?branch=master
-  [coveralls-badge-url]: https://coveralls.io/github/alexjlockwood/svg2vd?branch=master
-  [npm-badge]: https://badge.fury.io/js/svg2vd.svg
-  [npm-badge-url]: https://www.npmjs.com/package/svg2vd
-  [vscode]: https://code.visualstudio.com/
-  [npm]: https://www.npmjs.com/get-npm
-

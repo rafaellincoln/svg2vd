@@ -1,11 +1,11 @@
 {
-  "name": "svg2vd",
+  "name": "svg2vdandroid",
   "version": "1.0.2",
-  "description": "SVG to Vector Drawable converter",
+  "description": "SVG to Vector Drawable Android",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "svg2vd": "./bin/svg2vd"
+    "svg2vdandroid": "./bin/svg2vdandroid"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexjlockwood/svg2vd"
+    "url": "https://github.com/rafaellincoln/svg2vd"
   },
   "keywords": [
     "SVG",
